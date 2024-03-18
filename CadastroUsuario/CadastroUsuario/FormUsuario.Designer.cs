@@ -1,6 +1,6 @@
 ﻿namespace CadastroUsuario
 {
-    partial class Form1
+    partial class FormUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -29,17 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUsuario));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.buttonNovo = new System.Windows.Forms.Button();
-            this.buttonAtualizar = new System.Windows.Forms.Button();
             this.buttonExcluir = new System.Windows.Forms.Button();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonUltimo = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.buttonProximo = new System.Windows.Forms.Button();
             this.buttonAnterior = new System.Windows.Forms.Button();
             this.buttonPrimeiro = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBoxId = new System.Windows.Forms.TextBox();
+            this.maskedTextBoxTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBoxCPF = new System.Windows.Forms.MaskedTextBox();
             this.listBoxNomes = new System.Windows.Forms.ListBox();
             this.buttonListaNomesUsuario = new System.Windows.Forms.Button();
             this.textBoxEndereco = new System.Windows.Forms.TextBox();
@@ -58,9 +61,6 @@
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.textBoxComplemento = new System.Windows.Forms.TextBox();
             this.textBoxNumero = new System.Windows.Forms.TextBox();
-            this.maskedTextBoxCPF = new System.Windows.Forms.MaskedTextBox();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.maskedTextBoxTelefone = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -68,7 +68,6 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.buttonNovo);
-            this.groupBox1.Controls.Add(this.buttonAtualizar);
             this.groupBox1.Controls.Add(this.buttonExcluir);
             this.groupBox1.Controls.Add(this.buttonSalvar);
             this.groupBox1.Controls.Add(this.buttonUltimo);
@@ -77,7 +76,7 @@
             this.groupBox1.Controls.Add(this.buttonPrimeiro);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(573, 53);
+            this.groupBox1.Size = new System.Drawing.Size(503, 53);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -89,26 +88,18 @@
             this.buttonNovo.TabIndex = 7;
             this.buttonNovo.Text = "Novo";
             this.buttonNovo.UseVisualStyleBackColor = true;
-            // 
-            // buttonAtualizar
-            // 
-            this.buttonAtualizar.ImageKey = "(none)";
-            this.buttonAtualizar.Location = new System.Drawing.Point(414, 11);
-            this.buttonAtualizar.Name = "buttonAtualizar";
-            this.buttonAtualizar.Size = new System.Drawing.Size(82, 22);
-            this.buttonAtualizar.TabIndex = 6;
-            this.buttonAtualizar.Text = "Atualizar";
-            this.buttonAtualizar.UseVisualStyleBackColor = true;
+            this.buttonNovo.Click += new System.EventHandler(this.buttonNovo_Click);
             // 
             // buttonExcluir
             // 
             this.buttonExcluir.ImageKey = "(none)";
-            this.buttonExcluir.Location = new System.Drawing.Point(502, 11);
+            this.buttonExcluir.Location = new System.Drawing.Point(414, 11);
             this.buttonExcluir.Name = "buttonExcluir";
-            this.buttonExcluir.Size = new System.Drawing.Size(62, 22);
+            this.buttonExcluir.Size = new System.Drawing.Size(73, 22);
             this.buttonExcluir.TabIndex = 5;
             this.buttonExcluir.Text = "Excluir";
             this.buttonExcluir.UseVisualStyleBackColor = true;
+            this.buttonExcluir.Click += new System.EventHandler(this.buttonExcluir_Click);
             // 
             // buttonSalvar
             // 
@@ -119,6 +110,7 @@
             this.buttonSalvar.TabIndex = 4;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = true;
+            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
             // buttonUltimo
             // 
@@ -129,6 +121,16 @@
             this.buttonUltimo.Size = new System.Drawing.Size(62, 22);
             this.buttonUltimo.TabIndex = 3;
             this.buttonUltimo.UseVisualStyleBackColor = true;
+            this.buttonUltimo.Click += new System.EventHandler(this.buttonUltimo_Click);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "anterior.png");
+            this.imageList1.Images.SetKeyName(1, "seta.png");
+            this.imageList1.Images.SetKeyName(2, "mover.png");
+            this.imageList1.Images.SetKeyName(3, "proximo.png");
             // 
             // buttonProximo
             // 
@@ -139,6 +141,7 @@
             this.buttonProximo.Size = new System.Drawing.Size(62, 22);
             this.buttonProximo.TabIndex = 2;
             this.buttonProximo.UseVisualStyleBackColor = true;
+            this.buttonProximo.Click += new System.EventHandler(this.buttonProximo_Click);
             // 
             // buttonAnterior
             // 
@@ -149,6 +152,7 @@
             this.buttonAnterior.Size = new System.Drawing.Size(62, 22);
             this.buttonAnterior.TabIndex = 1;
             this.buttonAnterior.UseVisualStyleBackColor = true;
+            this.buttonAnterior.Click += new System.EventHandler(this.buttonAnterior_Click);
             // 
             // buttonPrimeiro
             // 
@@ -159,9 +163,11 @@
             this.buttonPrimeiro.Size = new System.Drawing.Size(62, 22);
             this.buttonPrimeiro.TabIndex = 0;
             this.buttonPrimeiro.UseVisualStyleBackColor = true;
+            this.buttonPrimeiro.Click += new System.EventHandler(this.buttonPrimeiro_Click);
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.textBoxId);
             this.groupBox2.Controls.Add(this.maskedTextBoxTelefone);
             this.groupBox2.Controls.Add(this.maskedTextBoxCPF);
             this.groupBox2.Controls.Add(this.listBoxNomes);
@@ -184,9 +190,32 @@
             this.groupBox2.Controls.Add(this.textBoxNumero);
             this.groupBox2.Location = new System.Drawing.Point(13, 72);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(573, 300);
+            this.groupBox2.Size = new System.Drawing.Size(503, 300);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
+            // 
+            // textBoxId
+            // 
+            this.textBoxId.Location = new System.Drawing.Point(346, 29);
+            this.textBoxId.Name = "textBoxId";
+            this.textBoxId.Size = new System.Drawing.Size(29, 22);
+            this.textBoxId.TabIndex = 22;
+            this.textBoxId.Visible = false;
+            // 
+            // maskedTextBoxTelefone
+            // 
+            this.maskedTextBoxTelefone.Location = new System.Drawing.Point(87, 136);
+            this.maskedTextBoxTelefone.Name = "maskedTextBoxTelefone";
+            this.maskedTextBoxTelefone.Size = new System.Drawing.Size(129, 22);
+            this.maskedTextBoxTelefone.TabIndex = 21;
+            // 
+            // maskedTextBoxCPF
+            // 
+            this.maskedTextBoxCPF.Location = new System.Drawing.Point(87, 18);
+            this.maskedTextBoxCPF.Name = "maskedTextBoxCPF";
+            this.maskedTextBoxCPF.Size = new System.Drawing.Size(129, 22);
+            this.maskedTextBoxCPF.TabIndex = 20;
+            this.maskedTextBoxCPF.Leave += new System.EventHandler(this.maskedTextBoxCPF_Leave);
             // 
             // listBoxNomes
             // 
@@ -197,6 +226,7 @@
             this.listBoxNomes.Size = new System.Drawing.Size(106, 20);
             this.listBoxNomes.TabIndex = 19;
             this.listBoxNomes.Visible = false;
+            this.listBoxNomes.SelectedIndexChanged += new System.EventHandler(this.listBoxNomes_SelectedIndexChanged);
             // 
             // buttonListaNomesUsuario
             // 
@@ -206,6 +236,7 @@
             this.buttonListaNomesUsuario.Size = new System.Drawing.Size(10, 15);
             this.buttonListaNomesUsuario.TabIndex = 18;
             this.buttonListaNomesUsuario.UseVisualStyleBackColor = true;
+            this.buttonListaNomesUsuario.Click += new System.EventHandler(this.buttonListaNomesUsuario_Click);
             // 
             // textBoxEndereco
             // 
@@ -297,7 +328,6 @@
             // 
             // comboBoxSexo
             // 
-            this.comboBoxSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSexo.FormattingEnabled = true;
             this.comboBoxSexo.Items.AddRange(new object[] {
             "Masculino",
@@ -343,39 +373,16 @@
             this.textBoxNumero.Size = new System.Drawing.Size(129, 22);
             this.textBoxNumero.TabIndex = 1;
             // 
-            // maskedTextBoxCPF
-            // 
-            this.maskedTextBoxCPF.Location = new System.Drawing.Point(87, 18);
-            this.maskedTextBoxCPF.Name = "maskedTextBoxCPF";
-            this.maskedTextBoxCPF.Size = new System.Drawing.Size(129, 22);
-            this.maskedTextBoxCPF.TabIndex = 20;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "anterior.png");
-            this.imageList1.Images.SetKeyName(1, "seta.png");
-            this.imageList1.Images.SetKeyName(2, "mover.png");
-            this.imageList1.Images.SetKeyName(3, "proximo.png");
-            // 
-            // maskedTextBoxTelefone
-            // 
-            this.maskedTextBoxTelefone.Location = new System.Drawing.Point(87, 136);
-            this.maskedTextBoxTelefone.Name = "maskedTextBoxTelefone";
-            this.maskedTextBoxTelefone.Size = new System.Drawing.Size(129, 22);
-            this.maskedTextBoxTelefone.TabIndex = 21;
-            // 
-            // Form1
+            // FormUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(627, 386);
+            this.ClientSize = new System.Drawing.Size(532, 386);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Form1";
+            this.Name = "FormUsuario";
             this.Text = "Cadastro de Usuário";
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -387,7 +394,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button buttonAtualizar;
         private System.Windows.Forms.Button buttonExcluir;
         private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.Button buttonUltimo;
@@ -407,7 +413,6 @@
         private System.Windows.Forms.Label labelSexo;
         private System.Windows.Forms.Label labelComplemento;
         private System.Windows.Forms.Label labelCPF;
-        private System.Windows.Forms.ComboBox comboBoxSexo;
         private System.Windows.Forms.Label labelDataNascimento;
         private System.Windows.Forms.Label labelEmail;
         private System.Windows.Forms.TextBox textBoxEndereco;
@@ -417,6 +422,8 @@
         private System.Windows.Forms.MaskedTextBox maskedTextBoxCPF;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxTelefone;
+        private System.Windows.Forms.TextBox textBoxId;
+        public System.Windows.Forms.ComboBox comboBoxSexo;
     }
 }
 
