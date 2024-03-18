@@ -85,7 +85,7 @@
             this.buttonNovo.Location = new System.Drawing.Point(6, 11);
             this.buttonNovo.Name = "buttonNovo";
             this.buttonNovo.Size = new System.Drawing.Size(62, 22);
-            this.buttonNovo.TabIndex = 7;
+            this.buttonNovo.TabIndex = 10;
             this.buttonNovo.Text = "Novo";
             this.buttonNovo.UseVisualStyleBackColor = true;
             this.buttonNovo.Click += new System.EventHandler(this.buttonNovo_Click);
@@ -96,7 +96,7 @@
             this.buttonExcluir.Location = new System.Drawing.Point(414, 11);
             this.buttonExcluir.Name = "buttonExcluir";
             this.buttonExcluir.Size = new System.Drawing.Size(73, 22);
-            this.buttonExcluir.TabIndex = 5;
+            this.buttonExcluir.TabIndex = 16;
             this.buttonExcluir.Text = "Excluir";
             this.buttonExcluir.UseVisualStyleBackColor = true;
             this.buttonExcluir.Click += new System.EventHandler(this.buttonExcluir_Click);
@@ -107,7 +107,7 @@
             this.buttonSalvar.Location = new System.Drawing.Point(346, 11);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(62, 22);
-            this.buttonSalvar.TabIndex = 4;
+            this.buttonSalvar.TabIndex = 15;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = true;
             this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
@@ -119,7 +119,7 @@
             this.buttonUltimo.Location = new System.Drawing.Point(278, 11);
             this.buttonUltimo.Name = "buttonUltimo";
             this.buttonUltimo.Size = new System.Drawing.Size(62, 22);
-            this.buttonUltimo.TabIndex = 3;
+            this.buttonUltimo.TabIndex = 14;
             this.buttonUltimo.UseVisualStyleBackColor = true;
             this.buttonUltimo.Click += new System.EventHandler(this.buttonUltimo_Click);
             // 
@@ -139,7 +139,7 @@
             this.buttonProximo.Location = new System.Drawing.Point(210, 11);
             this.buttonProximo.Name = "buttonProximo";
             this.buttonProximo.Size = new System.Drawing.Size(62, 22);
-            this.buttonProximo.TabIndex = 2;
+            this.buttonProximo.TabIndex = 13;
             this.buttonProximo.UseVisualStyleBackColor = true;
             this.buttonProximo.Click += new System.EventHandler(this.buttonProximo_Click);
             // 
@@ -150,7 +150,7 @@
             this.buttonAnterior.Location = new System.Drawing.Point(142, 11);
             this.buttonAnterior.Name = "buttonAnterior";
             this.buttonAnterior.Size = new System.Drawing.Size(62, 22);
-            this.buttonAnterior.TabIndex = 1;
+            this.buttonAnterior.TabIndex = 12;
             this.buttonAnterior.UseVisualStyleBackColor = true;
             this.buttonAnterior.Click += new System.EventHandler(this.buttonAnterior_Click);
             // 
@@ -161,7 +161,7 @@
             this.buttonPrimeiro.Location = new System.Drawing.Point(74, 11);
             this.buttonPrimeiro.Name = "buttonPrimeiro";
             this.buttonPrimeiro.Size = new System.Drawing.Size(62, 22);
-            this.buttonPrimeiro.TabIndex = 0;
+            this.buttonPrimeiro.TabIndex = 11;
             this.buttonPrimeiro.UseVisualStyleBackColor = true;
             this.buttonPrimeiro.Click += new System.EventHandler(this.buttonPrimeiro_Click);
             // 
@@ -199,22 +199,24 @@
             this.textBoxId.Location = new System.Drawing.Point(346, 29);
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.Size = new System.Drawing.Size(29, 22);
-            this.textBoxId.TabIndex = 22;
+            this.textBoxId.TabIndex = 17;
             this.textBoxId.Visible = false;
             // 
             // maskedTextBoxTelefone
             // 
             this.maskedTextBoxTelefone.Location = new System.Drawing.Point(87, 136);
+            this.maskedTextBoxTelefone.Mask = "(00)00000-0000";
             this.maskedTextBoxTelefone.Name = "maskedTextBoxTelefone";
             this.maskedTextBoxTelefone.Size = new System.Drawing.Size(129, 22);
-            this.maskedTextBoxTelefone.TabIndex = 21;
+            this.maskedTextBoxTelefone.TabIndex = 5;
             // 
             // maskedTextBoxCPF
             // 
             this.maskedTextBoxCPF.Location = new System.Drawing.Point(87, 18);
+            this.maskedTextBoxCPF.Mask = "000,000,000-00";
             this.maskedTextBoxCPF.Name = "maskedTextBoxCPF";
             this.maskedTextBoxCPF.Size = new System.Drawing.Size(129, 22);
-            this.maskedTextBoxCPF.TabIndex = 20;
+            this.maskedTextBoxCPF.TabIndex = 1;
             this.maskedTextBoxCPF.Leave += new System.EventHandler(this.maskedTextBoxCPF_Leave);
             // 
             // listBoxNomes
@@ -224,7 +226,7 @@
             this.listBoxNomes.Location = new System.Drawing.Point(381, 29);
             this.listBoxNomes.Name = "listBoxNomes";
             this.listBoxNomes.Size = new System.Drawing.Size(106, 20);
-            this.listBoxNomes.TabIndex = 19;
+            this.listBoxNomes.TabIndex = 18;
             this.listBoxNomes.Visible = false;
             this.listBoxNomes.SelectedIndexChanged += new System.EventHandler(this.listBoxNomes_SelectedIndexChanged);
             // 
@@ -234,7 +236,7 @@
             this.buttonListaNomesUsuario.Location = new System.Drawing.Point(475, 58);
             this.buttonListaNomesUsuario.Name = "buttonListaNomesUsuario";
             this.buttonListaNomesUsuario.Size = new System.Drawing.Size(10, 15);
-            this.buttonListaNomesUsuario.TabIndex = 18;
+            this.buttonListaNomesUsuario.TabIndex = 19;
             this.buttonListaNomesUsuario.UseVisualStyleBackColor = true;
             this.buttonListaNomesUsuario.Click += new System.EventHandler(this.buttonListaNomesUsuario_Click);
             // 
@@ -243,7 +245,7 @@
             this.textBoxEndereco.Location = new System.Drawing.Point(87, 209);
             this.textBoxEndereco.Name = "textBoxEndereco";
             this.textBoxEndereco.Size = new System.Drawing.Size(399, 22);
-            this.textBoxEndereco.TabIndex = 17;
+            this.textBoxEndereco.TabIndex = 7;
             // 
             // labelEmail
             // 
@@ -335,7 +337,7 @@
             this.comboBoxSexo.Location = new System.Drawing.Point(87, 92);
             this.comboBoxSexo.Name = "comboBoxSexo";
             this.comboBoxSexo.Size = new System.Drawing.Size(129, 24);
-            this.comboBoxSexo.TabIndex = 6;
+            this.comboBoxSexo.TabIndex = 3;
             // 
             // dateTimePickerDataNascimento
             // 
@@ -343,35 +345,35 @@
             this.dateTimePickerDataNascimento.Location = new System.Drawing.Point(356, 95);
             this.dateTimePickerDataNascimento.Name = "dateTimePickerDataNascimento";
             this.dateTimePickerDataNascimento.Size = new System.Drawing.Size(130, 22);
-            this.dateTimePickerDataNascimento.TabIndex = 5;
+            this.dateTimePickerDataNascimento.TabIndex = 4;
             // 
             // textBoxEmail
             // 
             this.textBoxEmail.Location = new System.Drawing.Point(87, 171);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(399, 22);
-            this.textBoxEmail.TabIndex = 4;
+            this.textBoxEmail.TabIndex = 6;
             // 
             // textBoxNome
             // 
             this.textBoxNome.Location = new System.Drawing.Point(87, 55);
             this.textBoxNome.Name = "textBoxNome";
             this.textBoxNome.Size = new System.Drawing.Size(399, 22);
-            this.textBoxNome.TabIndex = 3;
+            this.textBoxNome.TabIndex = 2;
             // 
             // textBoxComplemento
             // 
             this.textBoxComplemento.Location = new System.Drawing.Point(357, 253);
             this.textBoxComplemento.Name = "textBoxComplemento";
             this.textBoxComplemento.Size = new System.Drawing.Size(130, 22);
-            this.textBoxComplemento.TabIndex = 2;
+            this.textBoxComplemento.TabIndex = 9;
             // 
             // textBoxNumero
             // 
             this.textBoxNumero.Location = new System.Drawing.Point(87, 253);
             this.textBoxNumero.Name = "textBoxNumero";
             this.textBoxNumero.Size = new System.Drawing.Size(129, 22);
-            this.textBoxNumero.TabIndex = 1;
+            this.textBoxNumero.TabIndex = 8;
             // 
             // FormUsuario
             // 

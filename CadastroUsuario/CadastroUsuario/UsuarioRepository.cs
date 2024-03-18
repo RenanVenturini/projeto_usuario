@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Windows.Forms;
 
 namespace CadastroUsuario
 {
@@ -34,6 +33,7 @@ namespace CadastroUsuario
                 cmd.Parameters.AddWithValue("@Complemento", usuario.Complemento);
 
                 cmd.ExecuteNonQuery();
+
             }
         }
 
