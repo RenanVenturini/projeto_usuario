@@ -80,8 +80,7 @@ namespace CadastroUsuario
             if (string.IsNullOrEmpty(textBoxId.Text))
                 return;
 
-            _usuarioRepository.ExcluirUsuario(Convert.ToInt32(textBoxId.Text));
-            LimparCampos();
+            ExcluirUsuario(Convert.ToInt32(textBoxId.Text));
         }
 
         private void buttonSalvar_Click(object sender, EventArgs e)
@@ -177,6 +176,17 @@ namespace CadastroUsuario
 
             _usuarioRepository.AtualizarUsuario(usuario);
             MessageBox.Show("Registro salvo com sucesso.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void ExcluirUsuario(int id)
+        {
+            var result = MessageBox.Show("Deseja realmente excluir esse registro?", "Confirmar exclusão", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                _usuarioRepository.ExcluirUsuario(id);
+                LimparCampos();
+            }
         }
 
         private void CarregarNomes()

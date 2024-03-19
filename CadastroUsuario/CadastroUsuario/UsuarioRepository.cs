@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 
 namespace CadastroUsuario
@@ -10,7 +11,7 @@ namespace CadastroUsuario
 
         public UsuarioRepository()
         {
-            _connectionString = "Data Source=DESKTOP-EA69SA6\\SQLEXPRESS;Initial Catalog=Cadastros;Integrated Security=True";
+            _connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
         }
 
         public void CriarUsuario(Usuario usuario)
